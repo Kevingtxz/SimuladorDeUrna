@@ -5,18 +5,9 @@
    4. Prefeiro ganha com votos > 50% votos válidos
    5. O programa só funciona entre 8 e 17horas
 
-
     referências:
     https://br.noticias.yahoo.com/eleicoes-2020-quais-documentos-necessarios-para-votar-162643997.html
-    https://siga0984.wordpress.com/2019/05/01/algoritmos-validacao-de-titulo-de-eleitor/
     https://stackoverflow.com/questions/701524/getting-the-current-hour-in-c-using-time-h
- */
-
-// 2
-/*
-    http://clubes.obmep.org.br/blog/a-matematica-nos-documentos-titulo-de-eleitor/
-    Título de Eleitor, certificado de reservista, carteira de trabalho, carteira nacional de habilitação ou a própria carteira de identidade."
-    Não iremos considerar título com 13 dígitos
 */
 #include <stdio.h>
 #include <time.h>
@@ -55,8 +46,10 @@ int main(){
 	char nome_vereador_7 = "Jonas";
 	char nome_vereador_8 = "Horlando";
 
-
+	int pergunta;
 	int titulo;
+	int carteira;
+	int reservista;
 
 
 	while(7 < hour <18) {
@@ -76,23 +69,38 @@ int main(){
         printf("| |--------------|  |   0   |    |\n");
         printf("|                   (B)(V)(C)    |\n");
 	    printf("----------------------------------\n");
-
-	    // Validação do Título do eleitor, referência: https://siga0984.wordpress.com/2019/05/01/algoritmos-validacao-de-titulo-de-eleitor/
+	    printf("\n")
         printf("Responda as seguinte questoes com '1' para 'sim' ou qualquer outro numero para 'não':\n");
-        printf("Candidato, você trouxe o título de eleitor?\n");
+        printf("Eleitor, você trouxe o título de eleitor?\n");
+        scanf("%d", &pergunta);
+        printf("Eleitor, digite seu titulo?\n");
         scanf("%d", &titulo);
 
-        if(titulo==1){
-            printf("Candidato, você trouxe o certificado reservisa? Digite '2' caso nao seja obrigatorio para voce\n");
-            if(0<titulo<3){
+        if(pergunta==1){
+            printf("Eleitor, você trouxe o certificado reservisa? Digite '2' caso nao seja obrigatorio para voce\n");
+            scanf("%d", &pergunta);
+            if(pergunta==1){
+                printf("Eleitor, digite seu certificado de reservista?\n");
+                scanf("%d", &reservista);
+                pergunta = 0;
+            }
+            if(pergunta==2){
+                printf("Eleitor, você trouxe sua carteira de trabalho, de habilitacao ou de identidade?\n");
+                scanf("%d", &pergunta);
+                if(pergunta==1){
+                    printf("Eleitor, digite sua carteira de trabalho, de habilitacao ou de identidade?\n");
+                    scanf("%d", &carteira);
+                    pergunta = 0;
+                }
+            }
+            if(pergunta==0){
 
+            }
+            if(pergunta!=0){
+                printf("E necessario os documentos para o voto.")
             }
 
         }
-        // Validação do certificado reservisa
-
-        // Validação da carteira de trabalho ou validação carteira nacional de habilitação
     }
     return 0;
 }
-
