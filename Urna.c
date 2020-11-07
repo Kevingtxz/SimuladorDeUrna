@@ -1,18 +1,18 @@
-/* 1. Criar urna eletrÃ´nica em C
- 2. Primeiro passo, verificar documentos eleitorais
- 3. Segundo passo, escolher opÃ§Ãµes para prefeiro e para vereadores. 1 para 4
- 4. Prefeiro ganha com votos > 50% votos vÃ¡lidos
- 5. O programa sÃ³ funciona entre 8 e 17horas
+/*
+   1. Criar urna eletrônica em C
+   2. Primeiro passo, verificar documentos eleitorais
+   3. Segundo passo, escolher opções para prefeiro e para vereadores. 1 para 4
+   4. Prefeiro ganha com votos > 50% votos válidos
+   5. O programa só funciona entre 8 e 17horas
+
+
+   referências: https://br.noticias.yahoo.com/eleicoes-2020-quais-documentos-necessarios-para-votar-162643997.html, https://siga0984.wordpress.com/2019/05/01/algoritmos-validacao-de-titulo-de-eleitor/,
  */
 
-// referÃªncias : https://dicasdeprogramacao.com.br/algoritmo-para-validar-cpf/ ; https://siga0984.wordpress.com/2019/05/01/algoritmos-validacao-de-titulo-de-eleitor/ ; 
-
-/*
-	Documento com foto: certificado de reservista, carteira de trabalho, carteira nacional de habilitaÃ§Ã£o ou a prÃ³pria carteira de identidade.
-
-	TÃ­tulo de Eleitor: nele consta sua zona e seÃ§Ã£o onde irÃ¡ votar. VocÃª tambÃ©m pode optar por baixar o aplicativo do e-TÃ­tulo. 
+// 2
+/* referências https://br.noticias.yahoo.com/eleicoes-2020-quais-documentos-necessarios-para-votar-162643997.html
+   Título de Eleitor, certificado de reservista, carteira de trabalho, carteira nacional de habilitação ou a própria carteira de identidade."
 */
-
 #include <stdio.h>
 #include <windows.h>
 int main(){
@@ -22,39 +22,20 @@ int main(){
 	int votantes = 10;
 
 	while(8 < lt.wHour <17){
-		for(;votantes!= 0; votantes--){
-			printf('Digite seu CPF, somente nÃºmeros:')
-   			scanf("%d", &cpf);
-			int digito1 = 0;
-			int	digito2 = 0;
-			int soma1 = 0;
-			int soma2 = 0;
-			short multiplicadores[10] = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
-			int	i;
+	    printf("----------------------------------\n");
+        printf("| |--------------|  ---------    |\n");
+        printf("| |    BRASIL    |  | 1 2 3 |    |\n");
+        printf("| |  UM PAIS DE  |  | 4 5 6 |    |\n");
+        printf("| |    TODOS     |  | 7 8 9 |    |\n");
+        printf("| |--------------|  |   0   |    |\n");
+        printf("|                   (B)(V)(C)    |\n");
+	    printf("----------------------------------\n");
 
-			for (i = 0; i < 9; i++)
-				soma1 += (cpf[i] * multiplicadores[i+1]);
-			for (i = 0; i < 10; i++)
-				soma2 += (cpf[i] * multiplicadores[i]);
+	    // Validação do Título do eleitor, referência: https://siga0984.wordpress.com/2019/05/01/algoritmos-validacao-de-titulo-de-eleitor/
 
-			digito1 = 11 - (soma1 % 11);
-			digito2 = 11 - (soma2 % 11);
+        // Validação do
 
-			digito1 >= 10 ? digito1 = 0 : digito1;
-			digito2 >= 10 ? digito2 = 0 : digito1;
-
-			if (cpf[9] != digito1 || cpf[10] != digito2){
-				printf('Digite um nÃºmero vÃ¡lido:')
-  				  scanf("%d", &testInteger);  
-            }
-
-
-			printf('Digite seu TÃ­tulo:')
-			int titulo;
-			// if (titulo==13 | titulo==12){}
-
-			votantes++;
-
-        }
+        break;
     }
 }
+
