@@ -50,9 +50,9 @@ int main(){
 	char nome_vereador_5[10] = "Marcelinho";
 	char nome_vereador_6[9] = "Praticia";
 	char nome_vereador_7[6] = "Paulo";
-	char nome_vereador_8[7] = "Alfredo";
-	// Felipe, isso está errado, eu
+	char nome_vereador_8[8] = "Alfredo";
 	char last[1] = " ";
+	// Felipe, isso está errado, mas se você tirar, não vai printar o último nome. Tem que pesquisar como funciona o C salvando os arrays, mas eu to com dor de cabeça e não saberia fazer isso agora.
 
 	// Nome dos vencedores
 
