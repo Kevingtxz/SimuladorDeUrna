@@ -9,6 +9,7 @@
     https://stackoverflow.com/questions/701524/getting-the-current-hour-in-c-using-time-h
 */
 #include <stdio.h>
+// importando biblioteca time.h para utilizar a hora do sistema Windows
 #include <time.h>
 
 int main(){
@@ -41,15 +42,17 @@ int main(){
 	char nome_prefeito_1[6] = "Kevin";
 	char nome_vice_1[6] = "Joana";
 	char nome_prefeito_2[8] = "Leticia";
-	char nome_vice_2[8] = "Paulo";
-	char nome_vereador_1[8] = "Jonathan";
-	char nome_vereador_2[4] = "Ruan";
-	char nome_vereador_3[8] = "Fernanda";
-	char nome_vereador_4[7] = "Juliana";
+	char nome_vice_2[6] = "Jonas";
+	char nome_vereador_1[9] = "Jonathan";
+	char nome_vereador_2[5] = "Ruan";
+	char nome_vereador_3[9] = "Fernanda";
+	char nome_vereador_4[8] = "Juliana";
 	char nome_vereador_5[10] = "Marcelinho";
-	char nome_vereador_6[8] = "Praticia";
-	char nome_vereador_7[5] = "Jonas";
-	char nome_vereador_8[8] = "Horlando";
+	char nome_vereador_6[9] = "Praticia";
+	char nome_vereador_7[6] = "Paulo";
+	char nome_vereador_8[7] = "Alfredo";
+	// Felipe, isso está errado, eu
+	char last[1] = " ";
 
 	// Nome dos vencedores
 
@@ -59,7 +62,7 @@ int main(){
     short vencedor_vereador_3;
     short vencedor_vereador_4;
 
-    // variaveis para avaliação
+    // variáveis para avaliação
 
 	short pergunta;
 	int titulo;
@@ -122,8 +125,8 @@ int main(){
             printf("Digite '44444' para o candidato a vereador 'Juliana:\n");
             printf("Digite '55555' para o candidato a vereador 'Marcelinho:\n");
             printf("Digite '66666' para o candidato a vereador 'Patricia:\n");
-            printf("Digite '77777' para o candidato a vereador 'Jonas:\n");
-            printf("Digite '88888' para o candidato a vereador 'Horlando:\n");
+            printf("Digite '77777' para o candidato a vereador 'Paulo:\n");
+            printf("Digite '88888' para o candidato a vereador 'Alfredo:\n");
             printf("\n");
             scanf("%d", &voto);
             printf("\n");
@@ -179,5 +182,6 @@ int main(){
             printf("Nao é permitido votar sem o titulo, busque o documento e volte ate as 17 de hoje.\n");
         }
     }
+    // Felipe, coloque a comparação dos valores aqui para decidir o vencedor.
     return 0;
 }
