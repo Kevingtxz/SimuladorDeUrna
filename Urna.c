@@ -47,7 +47,7 @@ int main(){
 	char nome_vereador_2[5] = "Ruan";
 	char nome_vereador_3[9] = "Fernanda";
 	char nome_vereador_4[8] = "Juliana";
-	char nome_vereador_5[10] = "Marcelinho";
+	char nome_vereador_5[11] = "Marcelinho";
 	char nome_vereador_6[9] = "Praticia";
 	char nome_vereador_7[6] = "Paulo";
 	char nome_vereador_8[8] = "Alfredo";
@@ -193,8 +193,22 @@ int main(){
             }
         }
     }
-    if(contador_de_votos != 0){
 
+
+
+
+
+    if(contador_de_votos != 0){
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
         printf("\n");
         printf("\n");
         printf("\n");
@@ -357,16 +371,13 @@ int main(){
 
 
 
-
-        short contador_de_votos_validos_prefeito = contador_de_votos - contador_nulo_prefeito;
-
         // comparação de votos de prefeitos
         if(contador_prefeito_1 > contador_prefeito_2){
-            printf("O(A) novo prefeito(o) e o(a) %s e o(a) novo vice e o %s com %d dos %d votos validos.\n", nome_prefeito_1, nome_vice_1, contador_prefeito_1, contador_de_votos_validos_prefeito);
+            printf("O(A) novo prefeito(o) e o(a) %s e o(a) novo vice e o %s com %d dos votos validos.\n", nome_prefeito_1, nome_vice_1, contador_prefeito_1);
         }
 
         else if(contador_prefeito_2 > contador_prefeito_1){
-            printf("O(A) novo prefeito(o) e o(a) %s e o(a) novo vice e o %s com %d dos %d votos validos.\n", nome_prefeito_2, nome_vice_2, contador_prefeito_1, contador_de_votos_validos_prefeito);
+            printf("O(A) novo prefeito(o) e o(a) %s e o(a) novo vice e o %s com %d dos votos validos.\n", nome_prefeito_2, nome_vice_2, contador_prefeito_1);
         }
         else{
             printf("Ocorreu um empate tecnico para prefeito e vice, sera necessario segundo turno.\n");
@@ -516,6 +527,28 @@ int main(){
             vencedor_vereador_4 = -1;
             printf("O quarto eleito entre os vereadores foi o(a) %s com %d votos.\n", nome_vereador_8, contador_vereador_8);
         }
+
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
+        printf("\n");
     }
     return 1;
 }
