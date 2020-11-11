@@ -52,7 +52,6 @@ int main(){
 	char nome_vereador_7[6] = "Paulo";
 	char nome_vereador_8[8] = "Alfredo";
 
-
 	char last[1] = " ";
 	// Professor, essa variável está aqui porque nós ainda não entendemos ponteiro e é preciso saber ponteiro em C para retirarmos.
 
@@ -70,11 +69,16 @@ int main(){
 	short contador_de_votos = 0;
 	int voto = 0;
 
-	hour = 10;
-
 	while(18>hour){
+
         if(hour>7){
-            printf("Ola candidato, bom dia.\n");
+            printf("\n");
+            if(12>hour){
+                printf("Ola eleitor, bom dia.\n");
+            }
+            else{
+                printf("Ola eleitor, boa tarde.\n");
+            }
             printf("Siga para a eleicao.\n");
             printf("Responda as seguinte questoes com '1' para 'sim' ou qualquer outro numero para 'nao':\n");
             printf("Eleitor, voce trouxe o titulo de eleitor?\n");
@@ -214,6 +218,10 @@ int main(){
         printf("\n");
         printf("\n");
         printf("\n");
+
+
+
+
 
         // comparação de votos de vereadores
         if(contador_vereador_1 > vencedor_vereador_1){
