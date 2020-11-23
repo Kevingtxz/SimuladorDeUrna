@@ -1,4 +1,7 @@
 /*
+   Grupo: Kevin Trindade Gonçalves, Marcelo Ribeiro e Fellipe Vargas Campos.
+   Turma: 1 periodo de Engenharia de Controle e Automação
+
    1. Criar urna eletrônica em C
    2. Primeiro passo, verificar documentos eleitorais
    3. Segundo passo, escolher opções para prefeiro e para vereadores. 1 para 4
